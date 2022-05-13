@@ -11,8 +11,7 @@ public class Book {
     }
 
     public String getAuthorName() {
-        String authorName = new String(Author.getAuthorFamily() + " " + Author.getAuthorName());
-        return authorName;
+        return new String(Author.getAuthorFamily() + " " + Author.getAuthorName());
     }
 
     public String getName() {
