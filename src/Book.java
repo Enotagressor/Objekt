@@ -1,6 +1,6 @@
 public class Book {
-    private Author Author;
-    private String name;
+    private final Author Author;
+    private final String name;
     private int publishingYear;
 
 
@@ -11,7 +11,7 @@ public class Book {
     }
 
     public String getAuthorName() {
-        return new String(Author.getAuthorFamily() + " " + Author.getAuthorName());
+        return Author.getAuthorFamily() + " " + Author.getAuthorName();
     }
 
     public String getName() {
