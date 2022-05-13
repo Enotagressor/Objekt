@@ -1,7 +1,7 @@
 public class Author {
 
-    public String authorName;
-    public String authorFamily;
+    private final String authorName;
+    private final String authorFamily;
 
 
     public Author(String authorFamily, String authorName) {
