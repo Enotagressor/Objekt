@@ -9,11 +9,10 @@ public class Print {
             }
     }
    public static void printBook(Book[] library){
-       for (int i = 0; i < library.length; i++) {
-           if (library[i] != null){
-               System.out.println(library[i].getAuthor().getAuthorName() + " " +  library[i].getAuthor().getAuthorFamily() +": " + library[i].getName() +": " + library[i].getPublishingYear());
+       for (Book book : library)
+           if (book != null) {
+               System.out.println(book);
            }
-       }
    }
 
     public static void main(String[] args) {
@@ -26,10 +25,10 @@ public class Print {
         Book book2 = new Book(author2, "Салам", 2015);
         Book book3 = new Book(author3, "Сам", 205);
 
-//        System.out.println(book1.getAuthor().getAuthorName() + " " +  book1.getAuthor().getAuthorFamily() +": " + book1.getName() +": " + book1.getPublishingYear());
-//        System.out.println(book2.getAuthor().getAuthorName() + " " +  book2.getAuthor().getAuthorFamily() +": " + book2.getName() +": " + book2.getPublishingYear());
+//        System.out.println(book1);
+//        System.out.println(book2);
         book1.setPublishingYear(2002);
-//        System.out.println(book1.getAuthor().getAuthorName() + " " +  book1.getAuthor().getAuthorFamily() +": " + book1.getName() +": " + book1.getPublishingYear());
+     //   System.out.println(book1);
 
         Book[] library = new Book[15];
 
@@ -37,6 +36,8 @@ public class Print {
         addNewBook(library, book2);
         addNewBook(library, book3);
         printBook(library);
+
+        System.out.println(book1.equals(book2));
 
 
     }
